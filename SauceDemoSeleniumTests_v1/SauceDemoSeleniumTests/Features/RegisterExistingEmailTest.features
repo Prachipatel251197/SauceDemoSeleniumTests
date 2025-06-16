@@ -1,0 +1,11 @@
+Feature: Register with Existing Email
+
+  Scenario: Attempt to register with an already registered email address
+    Given I launch browser
+    And I navigate to url "http://automationexercise.com"
+    Then I verify that home page is visible successfully
+    When I click on "Signup / Login" button
+    Then I verify "New User Signup!" is visible
+    When I enter name "Prachi" and already registered email address "prachi_test1234@testmail.com"
+    And I click "Signup" button
+    Then I verify error "Email Address already exist!" is visible

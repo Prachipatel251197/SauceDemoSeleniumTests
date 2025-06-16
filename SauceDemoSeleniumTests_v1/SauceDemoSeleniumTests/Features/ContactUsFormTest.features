@@ -1,0 +1,12 @@
+Given Launch browser
+When Navigate to url 'http://automationexercise.com'
+Then Verify home page is visible successfully
+When Click on 'Contact Us' button
+Then Verify 'GET IN TOUCH' is visible
+When Enter name 'Prachi Patel', email 'prachi_test15@testmail.com', subject 'Test Subject', message 'This is a test message from Selenium automation.'
+And Upload file '../../../Utils/hello.js'
+And Click 'Submit' button
+And Handle alert popup
+Then Verify success message is visible
+When Click 'Home' button
+Then Verify landed on home page

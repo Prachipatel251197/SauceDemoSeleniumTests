@@ -1,0 +1,10 @@
+Feature: Login with incorrect credentials
+
+  Scenario: Login attempt with wrong email or password should show error
+    Given I launch the browser and navigate to 'http://automationexercise.com'
+    Then I verify that home page is visible successfully
+    When I click on 'Signup / Login' button
+    Then I verify 'Login to your account' is visible
+    When I enter email address 'wrong_email@test.com' and password 'wrongpassword'
+    And I click 'login' button
+    Then I verify error message 'Your email or password is incorrect!' is visible

@@ -1,0 +1,12 @@
+Feature: Logout functionality
+
+  Scenario: Successful logout from AutomationExercise website
+    Given I launch the browser and navigate to "http://automationexercise.com"
+    Then I verify that home page is visible successfully
+    When I click on "Signup / Login" button
+    Then I verify "Login to your account" is visible
+    When I enter email "prachi_test1234@testmail.com" and password "TestPassword123"
+    And I click on "login" button
+    Then I verify "Logged in as" username is visible
+    When I click on "Logout" button
+    Then I verify user is navigated to login page

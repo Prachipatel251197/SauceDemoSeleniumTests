@@ -1,0 +1,18 @@
+Feature: User Signup on AutomationExercise
+
+  Scenario: Successful user signup and account deletion
+    Given I launch the browser and navigate to "http://automationexercise.com"
+    Then I verify that the home page is visible successfully
+    When I click on "Signup / Login" button
+    Then I verify "New User Signup!" is visible
+    When I enter name "John Doe" and email "john.doe@example.com"
+    And I click "Signup" button
+    Then I verify that "ENTER ACCOUNT INFORMATION" is visible
+    When I fill the signup form with valid details
+    And I click "Create Account" button
+    Then I verify that "ACCOUNT CREATED!" is visible
+    When I click "Continue" button
+    Then I verify that "Logged in as John Doe" is visible
+    When I click "Delete Account" button
+    Then I verify that "ACCOUNT DELETED!" is visible
+    And I click "Continue" button
